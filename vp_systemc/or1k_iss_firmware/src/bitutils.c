@@ -25,21 +25,18 @@
 /* This code is commented throughout for use with Doxygen.                   */
 /* ------------------------------------------------------------------------- */
 
-
 /* ------------------------------------------------------------------------- */
 /*! Utility routine to set bit(s) in a volatile register
  *!
  *! @param reg   register
  *! @param flag  bit(s) to set                                               */
 /* ------------------------------------------------------------------------- */
-inline void  set( volatile unsigned char *reg,
-		           unsigned char  flag )
+inline void set(volatile unsigned char* reg, unsigned char flag)
 {
-  unsigned char  tmp = *reg;
-  *reg = tmp | flag;
+    unsigned char tmp = *reg;
+    *reg = tmp | flag;
 
-}	/* set() */
-
+} /* set() */
 
 /* ------------------------------------------------------------------------- */
 /*! Utility routine to clear bit(s) in a volatile register
@@ -47,14 +44,12 @@ inline void  set( volatile unsigned char *reg,
  *! @param reg   register
  *! @param flag  bit(s) to set                                               */
 /* ------------------------------------------------------------------------- */
-inline void  clr( volatile unsigned char *reg,
-		           unsigned char  flag )
+inline void clr(volatile unsigned char* reg, unsigned char flag)
 {
-  unsigned char  tmp = *reg;
-  *reg = tmp & ~flag;
+    unsigned char tmp = *reg;
+    *reg = tmp & ~flag;
 
-}	/* set() */
-
+} /* set() */
 
 /* ------------------------------------------------------------------------- */
 /*! Utility routine to identify if bits are all set in a register
@@ -64,14 +59,12 @@ inline void  clr( volatile unsigned char *reg,
  *!
  *! @return  1 if bits are all set, 0 otherwise                              */
 /* ------------------------------------------------------------------------- */
-inline int  is_set( volatile unsigned char  reg,
-		             unsigned char  flag )
+inline int is_set(volatile unsigned char reg, unsigned char flag)
 {
-  unsigned char  tmp = reg & flag;
-  return  flag == tmp;
+    unsigned char tmp = reg & flag;
+    return flag == tmp;
 
-}	/* is_set() */
-
+} /* is_set() */
 
 /* ------------------------------------------------------------------------- */
 /*! Utility routine to identify if bits are all clear in a register
@@ -81,10 +74,9 @@ inline int  is_set( volatile unsigned char  reg,
  *!
  *! @return  1 if bits are all clear, 0 otherwise                            */
 /* ------------------------------------------------------------------------- */
-inline int  is_clr( volatile unsigned char  reg,
-		             unsigned char  flag )
+inline int is_clr(volatile unsigned char reg, unsigned char flag)
 {
-  unsigned char  tmp = reg & flag;
-  return  0 == tmp;
+    unsigned char tmp = reg & flag;
+    return 0 == tmp;
 
-}	/* is_clr() */
+} /* is_clr() */

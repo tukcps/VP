@@ -41,13 +41,5 @@ int sc_main(int argc, char* argv[])
     std::cout << ">> simulation of " << sim_time << "s complete(elapsed time = ";
     std::cout << static_cast<double>(t_end - t_start) * 1e3 / CLOCKS_PER_SEC << " ms.)" << std::endl;
 
-    //    string message1 = "logg message 1 ...";
-    //    string message2 = "logg message 2 ...";
-    //    int    nNum = 10;
-    //    CLogger::GetLogger()->Log("message to be logged");
-    //    CLogger::GetLogger()->Log(message1);
-    //    LOGGER->Log(" Message is:%s Number is:%d", message2.c_str(), nNum);
-    //     *CLogger::GetLogger() << "log2";
-
     return 0;
 }
